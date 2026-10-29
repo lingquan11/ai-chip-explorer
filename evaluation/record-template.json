@@ -1,0 +1,12 @@
+{
+  "case_id": "填写角色 ID",
+  "run_id": "填写唯一运行标识",
+  "date": "填写运行日期 YYYY-MM-DD",
+  "model": "填写被测模型与版本，及模拟者和评价者模型",
+  "environment": "填写 Skill 版本、工具能力和运行环境",
+  "result": "not_run",
+  "evidence": "填写具体对话轮次与判断依据；未运行时写尚无",
+  "issues": "填写失败项或未运行原因",
+  "limitations": "填写证据、环境与测试范围的限制",
+  "transcript": "填写完整对话；未运行时写尚无"
+}
