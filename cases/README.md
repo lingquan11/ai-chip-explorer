@@ -79,3 +79,15 @@
 | 6b 笔记+检索 | [scenario-06b-other-with-search](runs/2026-10-30-角色分离/scenario-06b-other-with-search.md) | **8 轮单会话生成**（见文件头） | partial |
 
 与 [2026-10-30-自主评估](runs/2026-10-30-自主评估/summary.md) 对比：**整体档位仍为 partial**；检索 executor 更可追溯，**未**出现 pass 或真实用户验证。
+
+## 2026-10-30 角色分离补测（严格化）
+
+针对上一批 **5–8 / 4–7 轮代写** 与 **6b 单会话**，记录在 [runs/2026-10-30-角色分离-补测/](runs/2026-10-30-角色分离-补测/summary.md)。基线 SHA `ae627f7eda3cd0e582ff25b494d4e475338fa1a6`；**未** Codex 加载。
+
+| 场景 | 文件 | 轮次 | 分离 | 结果 |
+|---|---|---|---|---|
+| 4 已有 idea | [scenario-04-existing-idea-strict](runs/2026-10-30-角色分离-补测/scenario-04-existing-idea-strict.md) | 10 | 全程双代理 | partial |
+| 5 没有 idea | [scenario-05-no-idea-strict](runs/2026-10-30-角色分离-补测/scenario-05-no-idea-strict.md) | 10 | 全程双代理 | partial |
+| 6b 笔记+检索 | [scenario-06b-other-with-search-strict](runs/2026-10-30-角色分离-补测/scenario-06b-other-with-search-strict.md) | 10 | 6b 逐轮双代理 | partial |
+
+场景 4 检索 **≤3 篇 abs 且维护者 spot-check**；整体仍 **无 pass**。

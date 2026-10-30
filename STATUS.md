@@ -60,7 +60,16 @@
 - 分离：子代理 inherit（Composer 2.5）；场景 4/5 **部分轮次同代理代写**（见 summary）；6b **非**逐轮双代理。
 - 检索：2106.10499、2505.12665 等 abs 摘要级；场景 4 助手一轮列举 9 篇，**未全量 spot-check**。
 - 验证：独立评价者子代理；四场整体 **partial**。`python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 项 OK。
-- 未完成：严格逐轮分离补跑、Codex、无 Skill 分离对照。对比 [自主评估](cases/runs/2026-10-30-自主评估/summary.md) 见角色分离 summary。
+- 未完成：Codex、无 Skill 分离对照。对比 [自主评估](cases/runs/2026-10-30-自主评估/summary.md) 见角色分离 summary。
+
+### 2026-10-30 角色分离补测（严格化）
+
+- 日期：2026-10-30（Asia/Shanghai）。
+- 改动：新增 `cases/runs/2026-10-30-角色分离-补测/`（场景 4/5/6b 各 1 场、**8–12 轮**取 10 轮）；**未改** Skill/references。
+- 分离：用户/助手 **全程** 独立子代理；6b **逐轮** 双代理（非单会话）。评价者独立。
+- 检索：listed arXiv abs 维护者 HTTP 核实（见补测 summary）；read_scope 摘要级。
+- 验证：`python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 项 OK。三场 **partial**。
+- 未完成：6a 分离、Codex、无 Skill 分离对照。见 [补测 summary](cases/runs/2026-10-30-角色分离-补测/summary.md)。
 
 
 ## 2026-10-29 深度模拟（追加，不替换上文）
