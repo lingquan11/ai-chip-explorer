@@ -98,7 +98,7 @@
 
 - ~~在 `references/experiences.md` 为“拒绝计算”的用户补一个替代入口草稿~~ **2026-10-30 已完成**（[PR #7](https://github.com/lingquan11/ai-chip-explorer/pull/7)）：替代体验 E/F；见 `cases/runs/2026-10-30-refuse-calc/`。
 - ~~为注意力分数补不会把“0 次”听成零搬运的计数表~~ **2026-10-30 已完成**：两层计数写入 `references/experiences.md`；同一 AI 自评见 `cases/runs/2026-10-30-attention-count/`（merge SHA 见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)）。
-- ~~增加检索记录模板~~ **2026-10-30 已完成**（见 [retrieval-record-template.md](evaluation/retrieval-record-template.md) 与 `cases/runs/2026-10-30-自主评估/`）；**严格角色分离**重跑见 `cases/runs/2026-10-30-角色分离/`（**部分轮次仍代写**，非 Codex 盲测）。
+- ~~增加检索记录模板~~ **2026-10-30 已完成**（见 [retrieval-record-template.md](evaluation/retrieval-record-template.md) 与 `cases/runs/2026-10-30-自主评估/`）；**严格角色分离**重跑见 `cases/runs/2026-10-30-角色分离/`（**部分轮次仍代写**）；**补测**见 `cases/runs/2026-10-30-角色分离-补测/`（4/5/6b **全程双代理**，[PR #13](https://github.com/lingquan11/ai-chip-explorer/pull/13) → `5381127`）。
 - 过一段时间复查上述招聘页是否仍然没有发布日期。
 - Codex 安装、自动发现、四道练习的学生试跑、许可证，仍未做。上文已有的待办继续有效。
 
