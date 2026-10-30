@@ -1,6 +1,6 @@
 # 项目状态
 
-更新：2026-10-29。维护者应根据实际运行结果更新，不应凭文件存在就写成已验证。
+更新：2026-10-30。维护者应根据实际运行结果更新，不应凭文件存在就写成已验证。维护改动按日期见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)。
 
 ## 范围
 
@@ -36,7 +36,14 @@
 - 改动：`skills/ai-chip-explorer/references/experiences.md` 增加「当用户拒绝计算、觉得无聊或时间不够」及替代体验 E/F；`SKILL.md`「体验与偏好」增加一句，拒绝、无聊或时间不够时停止同类型题并指向该段。新增案例目录 `cases/runs/2026-10-30-refuse-calc/`。
 - 证据来源：墨芯「加入我们」页，查阅日期 2026-10-30；阅读范围为校招岗位标题、地点、职责与技能条目；未见岗位发布日期；页脚版权年显示 2025。样本只有一家公司。
 - 验证：同一 AI 扮演模拟用户、被测助手和评价者，做了两则摘要级复盘（拒绝计算、觉得无聊），整体均为 partial。没有在 Codex 中加载 Skill。
-- 未验证：Codex 安装与自动发现、真实学生试跑、角色分离重测。注意力「0 次」计数表和检索记录模板仍在待办。这不是独立盲测，也不能写成真实用户效果。
+- 未验证：Codex 安装与自动发现、真实学生试跑、角色分离重测。详见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md) 2026-10-30 拒绝计算条目（[PR #7](https://github.com/lingquan11/ai-chip-explorer/pull/7) → `defe375cf62dfea9b6f02bfa2c84f5d1c2cbfbcc`）。这不是独立盲测，也不能写成真实用户效果。
+
+### 2026-10-30 注意力两层计数表
+
+- 日期：2026-10-30（Asia/Shanghai）。
+- 改动：`references/experiences.md` 增加可选「注意力分数——两层读写计数」；新增 `cases/runs/2026-10-30-attention-count/`；[MAINTENANCE-LOG.md](MAINTENANCE-LOG.md) 追加本批说明。未改 `SKILL.md` 主流程。
+- 验证：Composer 2.5 同一 AI 自评 1 场（`scenario-03-rerun`），9 轮，整体 partial。`python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 项 OK。
+- 未验证：Codex 是否读到新段落、学生跟做第二层表、角色分离与全文文献。检索记录模板仍在待办。
 
 
 ## 2026-10-29 深度模拟（追加，不替换上文）
@@ -63,7 +70,8 @@
 
 ### 待办
 
-- ~~在 `references/experiences.md` 为“拒绝计算”的用户补一个替代入口草稿~~ **2026-10-30 已完成**：替代体验 E/F 已写入 `references/experiences.md`，并在 `SKILL.md`「体验与偏好」加了一句指向；同一 AI 自评，见 `cases/runs/2026-10-30-refuse-calc/`。仍待做：为注意力分数补一个不会把“0 次”听成零搬运的计数表。
+- ~~在 `references/experiences.md` 为“拒绝计算”的用户补一个替代入口草稿~~ **2026-10-30 已完成**（[PR #7](https://github.com/lingquan11/ai-chip-explorer/pull/7)）：替代体验 E/F；见 `cases/runs/2026-10-30-refuse-calc/`。
+- ~~为注意力分数补不会把“0 次”听成零搬运的计数表~~ **2026-10-30 已完成**：两层计数写入 `references/experiences.md`；同一 AI 自评见 `cases/runs/2026-10-30-attention-count/`（merge SHA 见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)）。
 - 增加检索记录模板，并在角色分离的条件下重跑没有 idea、已有 idea 和其他行业。
 - 过一段时间复查上述招聘页是否仍然没有发布日期。
 - Codex 安装、自动发现、四道练习的学生试跑、许可证，仍未做。上文已有的待办继续有效。
