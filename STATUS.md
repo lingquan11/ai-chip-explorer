@@ -51,7 +51,16 @@
 - 改动：新增 [evaluation/retrieval-record-template.md](evaluation/retrieval-record-template.md)；`SKILL.md`「科研与证据」与 [evaluation/README.md](evaluation/README.md) 引用该模板。新增 `cases/runs/2026-10-30-自主评估/`（10 场 + [summary](cases/runs/2026-10-30-自主评估/summary.md)）。
 - 联网检索（维护会话，摘要级）：arXiv abs 2402.07443、2406.10491、2111.12885、2505.12665；Google Scholar 429 未用。
 - 验证：`python3 -m unittest discover -s evaluation -p "test_*.py" -v` 3 项 OK。同一 AI（Composer 2.5）自评；4a/5a 有 Skill partial；4b/5b 无 Skill 对照 fail（脚本化，非盲测）。
-- 未完成：场景 1、2 各类第 2 次；角色分离重测；Codex 加载。详见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md) 本日条目。
+- 未完成：场景 1、2 各类第 2 次；Codex 加载。详见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md) 本日条目。
+
+### 2026-10-30 角色分离重测（场景 4 / 5 / 6）
+
+- 日期：2026-10-30（Asia/Shanghai）。
+- 改动：新增 `cases/runs/2026-10-30-角色分离/`（4 场 + [summary](cases/runs/2026-10-30-角色分离/summary.md)）；**未改** Skill/references。
+- 分离：子代理 inherit（Composer 2.5）；场景 4/5 **部分轮次同代理代写**（见 summary）；6b **非**逐轮双代理。
+- 检索：2106.10499、2505.12665 等 abs 摘要级；场景 4 助手一轮列举 9 篇，**未全量 spot-check**。
+- 验证：独立评价者子代理；四场整体 **partial**。`python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 项 OK。
+- 未完成：严格逐轮分离补跑、Codex、无 Skill 分离对照。对比 [自主评估](cases/runs/2026-10-30-自主评估/summary.md) 见角色分离 summary。
 
 
 ## 2026-10-29 深度模拟（追加，不替换上文）
@@ -80,7 +89,7 @@
 
 - ~~在 `references/experiences.md` 为“拒绝计算”的用户补一个替代入口草稿~~ **2026-10-30 已完成**（[PR #7](https://github.com/lingquan11/ai-chip-explorer/pull/7)）：替代体验 E/F；见 `cases/runs/2026-10-30-refuse-calc/`。
 - ~~为注意力分数补不会把“0 次”听成零搬运的计数表~~ **2026-10-30 已完成**：两层计数写入 `references/experiences.md`；同一 AI 自评见 `cases/runs/2026-10-30-attention-count/`（merge SHA 见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)）。
-- ~~增加检索记录模板~~ **2026-10-30 已完成**（见 [retrieval-record-template.md](evaluation/retrieval-record-template.md) 与 `cases/runs/2026-10-30-自主评估/`）；**角色分离**重跑仍为待办。
+- ~~增加检索记录模板~~ **2026-10-30 已完成**（见 [retrieval-record-template.md](evaluation/retrieval-record-template.md) 与 `cases/runs/2026-10-30-自主评估/`）；**严格角色分离**重跑见 `cases/runs/2026-10-30-角色分离/`（**部分轮次仍代写**，非 Codex 盲测）。
 - 过一段时间复查上述招聘页是否仍然没有发布日期。
 - Codex 安装、自动发现、四道练习的学生试跑、许可证，仍未做。上文已有的待办继续有效。
 

@@ -66,3 +66,16 @@
 | 6 其他行业 | 2 | [无资料](runs/2026-10-30-自主评估/scenario-06-other-agri-no-kb.md)；[检索+笔记](runs/2026-10-30-自主评估/scenario-06-other-with-search.md) |
 
 整体仍为模拟；**无 pass**；不能把 fail 对照外推为默认模型行为。
+
+## 2026-10-30 角色分离重测
+
+记录在 [runs/2026-10-30-角色分离/](runs/2026-10-30-角色分离/summary.md)。基线 Skill SHA `f09fdb3eeba1b7a88ee16b8329662779d145e6c3`；**未** Codex 加载。
+
+| 场景 | 文件 | 分离程度 | 结果 |
+|---|---|---|---|
+| 4 已有 idea | [scenario-04-existing-idea-sep](runs/2026-10-30-角色分离/scenario-04-existing-idea-sep.md) | 1–4 轮用户/助手独立子代理；5–8 **同代理代写** | partial |
+| 5 没有 idea | [scenario-05-no-idea-sep](runs/2026-10-30-角色分离/scenario-05-no-idea-sep.md) | 1–3 分离；4–7 代写 | partial |
+| 6a 无资料 | [scenario-06a-other-no-kb-sep](runs/2026-10-30-角色分离/scenario-06a-other-no-kb-sep.md) | 用户/助手分子代理 8 轮 | partial |
+| 6b 笔记+检索 | [scenario-06b-other-with-search](runs/2026-10-30-角色分离/scenario-06b-other-with-search.md) | **8 轮单会话生成**（见文件头） | partial |
+
+与 [2026-10-30-自主评估](runs/2026-10-30-自主评估/summary.md) 对比：**整体档位仍为 partial**；检索 executor 更可追溯，**未**出现 pass 或真实用户验证。
