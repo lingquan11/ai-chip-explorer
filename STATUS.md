@@ -43,7 +43,15 @@
 - 日期：2026-10-30（Asia/Shanghai）。
 - 改动：`references/experiences.md` 增加可选「注意力分数——两层读写计数」；新增 `cases/runs/2026-10-30-attention-count/`；[MAINTENANCE-LOG.md](MAINTENANCE-LOG.md) 追加本批说明。未改 `SKILL.md` 主流程。
 - 验证：Composer 2.5 同一 AI 自评 1 场（`scenario-03-rerun`），9 轮，整体 partial。`python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 项 OK。
-- 未验证：Codex 是否读到新段落、学生跟做第二层表、角色分离与全文文献。检索记录模板仍在待办。
+- 未验证：Codex 是否读到新段落、学生跟做第二层表、角色分离与全文文献。
+
+### 2026-10-30 检索模板与自主评估
+
+- 日期：2026-10-30（Asia/Shanghai）。
+- 改动：新增 [evaluation/retrieval-record-template.md](evaluation/retrieval-record-template.md)；`SKILL.md`「科研与证据」与 [evaluation/README.md](evaluation/README.md) 引用该模板。新增 `cases/runs/2026-10-30-自主评估/`（10 场 + [summary](cases/runs/2026-10-30-自主评估/summary.md)）。
+- 联网检索（维护会话，摘要级）：arXiv abs 2402.07443、2406.10491、2111.12885、2505.12665；Google Scholar 429 未用。
+- 验证：`python3 -m unittest discover -s evaluation -p "test_*.py" -v` 3 项 OK。同一 AI（Composer 2.5）自评；4a/5a 有 Skill partial；4b/5b 无 Skill 对照 fail（脚本化，非盲测）。
+- 未完成：场景 1、2 各类第 2 次；角色分离重测；Codex 加载。详见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md) 本日条目。
 
 
 ## 2026-10-29 深度模拟（追加，不替换上文）
@@ -72,7 +80,7 @@
 
 - ~~在 `references/experiences.md` 为“拒绝计算”的用户补一个替代入口草稿~~ **2026-10-30 已完成**（[PR #7](https://github.com/lingquan11/ai-chip-explorer/pull/7)）：替代体验 E/F；见 `cases/runs/2026-10-30-refuse-calc/`。
 - ~~为注意力分数补不会把“0 次”听成零搬运的计数表~~ **2026-10-30 已完成**：两层计数写入 `references/experiences.md`；同一 AI 自评见 `cases/runs/2026-10-30-attention-count/`（merge SHA 见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)）。
-- 增加检索记录模板，并在角色分离的条件下重跑没有 idea、已有 idea 和其他行业。
+- ~~增加检索记录模板~~ **2026-10-30 已完成**（见 [retrieval-record-template.md](evaluation/retrieval-record-template.md) 与 `cases/runs/2026-10-30-自主评估/`）；**角色分离**重跑仍为待办。
 - 过一段时间复查上述招聘页是否仍然没有发布日期。
 - Codex 安装、自动发现、四道练习的学生试跑、许可证，仍未做。上文已有的待办继续有效。
 

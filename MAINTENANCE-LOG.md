@@ -71,3 +71,28 @@
 **PR / commit**
 
 - [PR #8](https://github.com/lingquan11/ai-chip-explorer/pull/8) squash merge → `b03a5bba66f552fbdeeeb38e782987a48e80db2e`
+
+---
+
+## 2026-10-30：检索记录模板与自主评估
+
+**改了什么**
+
+- 新增 [evaluation/retrieval-record-template.md](evaluation/retrieval-record-template.md)（来源、查阅日期、地区、阅读范围、未能验证项；「未找到 ≠ 已证明无人做过」）。
+- `skills/ai-chip-explorer/SKILL.md`：科研与证据段指向该模板；[evaluation/README.md](evaluation/README.md) 同步。
+- 新增 [cases/runs/2026-10-30-自主评估/](cases/runs/2026-10-30-自主评估/summary.md)（六类场景 10 场；4/5 有 Skill vs 无 Skill 对照）；更新 [STATUS.md](STATUS.md)、[cases/README.md](cases/README.md)、[README.md](README.md) 一条亮点。
+
+**为何**
+
+- STATUS 待办：检索记录模板 + 联网条件下重跑已有 idea / 没有 idea / 其他行业。
+
+**测试 / 限制**
+
+- 基线 `origin/main` SHA：`9a829278e75772911864e36fa290c29861307247`；模型 **Composer 2.5**；未 Codex 加载；同一 AI 三角色自评。
+- 实际打开：arXiv abs/搜索页（见 summary）；Scholar 429。
+- 场景 1、2 各类仅 1 次（第 2 次未做，原因见 summary）。
+- `python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 项 OK。
+
+**PR / commit**
+
+- （本维护回合 PR 合入后在此补链接与 merge SHA）
