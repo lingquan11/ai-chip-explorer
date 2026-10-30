@@ -70,4 +70,4 @@
 
 **PR / commit**
 
-- （本批 PR squash merge 后在此补全 merge commit SHA）
+- [PR #8](https://github.com/lingquan11/ai-chip-explorer/pull/8) squash merge → `b03a5bba66f552fbdeeeb38e782987a48e80db2e`
