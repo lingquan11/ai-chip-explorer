@@ -105,6 +105,7 @@ $ai-chip-explorer 我想探索机器人领域，附件和链接是我准备的�
 - `evaluation/`：模拟测试与结果处理材料。
 - `cases/`：模拟对话、案例总结与测试局限。
 - [STATUS.md](STATUS.md)：完成状态、未验证项和下一步。
+- [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)：按日期的维护改动与模拟复测记录。
 - [MAINTENANCE-PROMPT.md](MAINTENANCE-PROMPT.md)：交给个人 AI 助理的维护提示词。
 
 项目许可尚未决定；引用、复用外部项目内容前应核对相应许可。发现问题时，可以先记录问题、使用环境和复现方式；可以通过本仓库的公开反馈渠道提交。

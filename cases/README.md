@@ -40,3 +40,13 @@
 |---|---|---|
 | 明确拒绝计算 | [scenario-A](runs/2026-10-30-refuse-calc/scenario-A-refuse.md) | 停止计算题，改对照岗位职责（替代 E） |
 | 觉得无聊但愿试别的 | [scenario-B](runs/2026-10-30-refuse-calc/scenario-B-bored.md) | 停止加法输入，改比较两段职责（替代 F） |
+
+## 2026-10-30 注意力两层计数
+
+针对 `2026-10-29-深度模拟/scenario-03` 中「分数数组 0 次」易被听成零搬运的问题，在 `experiences.md` 增加含 Query/Key 读取的计数表，并复测一场。记录在 [runs/2026-10-30-attention-count/](runs/2026-10-30-attention-count/summary.md)。
+
+条件：Composer 2.5，同一 AI 自评；未在 Codex 中加载 Skill；未新开文献网页。整体 partial。
+
+| 场景 | 完整对话 | 本轮可见结果 |
+|---|---|---|
+| 已有 idea（注意力分数） | [scenario-03-rerun](runs/2026-10-30-attention-count/scenario-03-rerun.md) | 引用两层表；12/8 与 4/0 分层说明；用户只认领 11、17 |
