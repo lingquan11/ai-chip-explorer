@@ -118,4 +118,27 @@
 
 **PR / commit**
 
-- （合入后补 PR 链接与 merge SHA）
+- [PR #12](https://github.com/lingquan11/ai-chip-explorer/pull/12) squash merge → `ae627f7eda3cd0e582ff25b494d4e475338fa1a6`（合入后 main 含该批记录；见仓库 history）
+
+---
+
+## 2026-10-30：角色分离补测（严格化）
+
+**改了什么**
+
+- 新增 [cases/runs/2026-10-30-角色分离-补测/](cases/runs/2026-10-30-角色分离-补测/summary.md)（场景 4、5、6b 各 10 轮；全程双代理；6b 非单会话）。
+- 更新 [cases/README.md](cases/README.md)、[STATUS.md](STATUS.md)。
+
+**为何**
+
+- 上一批 `2026-10-30-角色分离` 未满足 brief：4/5 后半程代写、6b 单会话生成。
+
+**测试 / 限制**
+
+- 基线 `origin/main` SHA：`ae627f7eda3cd0e582ff25b494d4e475338fa1a6`；Composer 2.5 / inherit 子代理。
+- arXiv abs 维护者 spot-check；评价者读摘要体 transcript。
+- 三场 **partial**；**无** Skill 改动。`python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 OK。
+
+**PR / commit**
+
+- [PR #13](https://github.com/lingquan11/ai-chip-explorer/pull/13) squash merge → `5381127d895421ef8b6d9dc58407764adb1707bb`
