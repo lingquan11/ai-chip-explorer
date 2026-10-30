@@ -2,6 +2,31 @@
 
 按日期记录本仓库的维护性改动。模拟测试均为同一 AI 自评时会在条目中写明，不写成真实用户效果。
 
+## 2026-10-31：Skill 检索默认 ≤3 与场景 4 无提示复测
+
+**改了什么**
+
+- `skills/ai-chip-explorer/SKILL.md`：「科研与证据」**首次检索默认 ≤3 条**；用户要求检索时**同/下轮**给模板与条目（反空转）。
+- [evaluation/retrieval-record-template.md](evaluation/retrieval-record-template.md)：一句默认 ≤3 来源行（指向 SKILL）。
+- 新增 [cases/runs/2026-10-31-自主评估/](cases/runs/2026-10-31-自主评估/summary.md)（11 场）；更新 [cases/README.md](cases/README.md)、[STATUS.md](STATUS.md)、[README.md](README.md) 一条亮点。
+
+**为何**
+
+- 上一批结论：场景 4「最多 3 篇」来自**模拟用户提示**，非 Skill 自克制；无提示时曾 **9 篇**并列（[角色分离](cases/runs/2026-10-30-角色分离/scenario-04-existing-idea-sep.md)）。
+
+**测试 / 限制**
+
+- 基线 `origin/main` SHA：`d3da3f7e4df51787124de3bb39c90eea62b3128f`；**Composer 2.5**；未 Codex 加载。
+- **4a** 角色分离（用户/助手子代理）；用户**未**口头上限；助手 **≤3** abs + spot-check（2402.07443 等）。
+- 其余场次同一 AI 三角色自评；4b/5b 刻意无 Skill fail 对照。
+- `python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 OK。
+
+**PR / commit**
+
+- （合入后补 PR 链接与 merge SHA）
+
+---
+
 ## 2026-10-29：深度模拟与首页亮点
 
 **改了什么**
