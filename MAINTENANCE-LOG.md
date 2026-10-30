@@ -96,3 +96,26 @@
 **PR / commit**
 
 - [PR #10](https://github.com/lingquan11/ai-chip-explorer/pull/10) squash merge → `41f2ed13987d57ea51e9943a8e995b5b3c19efa1`
+
+---
+
+## 2026-10-30：角色分离重测（场景 4 / 5 / 6）
+
+**改了什么**
+
+- 新增 [cases/runs/2026-10-30-角色分离/](cases/runs/2026-10-30-角色分离/summary.md) 四场完整对话 + 与自主评估批对比 summary。
+- 更新 [cases/README.md](cases/README.md)、[STATUS.md](STATUS.md)。
+
+**为何**
+
+- STATUS 待办：检索相关场景在分开上下文中重测。
+
+**测试 / 限制**
+
+- 基线 SHA `f09fdb3eeba1b7a88ee16b8329662779d145e6c3`；子代理 inherit（Composer 2.5）。
+- **未**完全分离：场景 4（5–8 轮）、5（4–7 轮）同代理代写；6b 单会话生成 8 轮。
+- 四场 **partial**；无 Skill 代码改动。unittest 3 OK。
+
+**PR / commit**
+
+- （合入后补 PR 链接与 merge SHA）
