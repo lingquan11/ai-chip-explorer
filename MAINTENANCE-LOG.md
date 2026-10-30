@@ -23,7 +23,7 @@
 
 **PR / commit**
 
-- （合入后补 PR 链接与 merge SHA）
+- [PR #15](https://github.com/lingquan11/ai-chip-explorer/pull/15) squash merge → `16bcbe7`（合入后 `origin/main` HEAD，以仓库为准）
 
 ---
 
