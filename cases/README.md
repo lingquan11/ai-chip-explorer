@@ -91,3 +91,14 @@
 | 6b 笔记+检索 | [scenario-06b-other-with-search-strict](runs/2026-10-30-角色分离-补测/scenario-06b-other-with-search-strict.md) | 10 | 6b 逐轮双代理 | partial |
 
 场景 4 检索 **≤3 篇 abs 且维护者 spot-check**；整体仍 **无 pass**。
+
+## 2026-10-31 自主评估（Skill 默认 ≤3 + 场景 4 无口头上限复测）
+
+记录在 [runs/2026-10-31-自主评估/](runs/2026-10-31-自主评估/summary.md)。基线 `origin/main` SHA `d3da3f7e4df51787124de3bb39c90eea62b3128f`；**Composer 2.5**；**未** Codex 加载。
+
+| 要点 | 说明 |
+|---|---|
+| Skill 改动 | `SKILL.md` 首次检索默认 ≤3 条；用户要检索时同/下轮给结果（非只确认会去查） |
+| **4a 复测** | 用户**未**说「最多 3 篇」；助手子代理仍 **≤3** abs（对照改前 [角色分离 9 篇](runs/2026-10-30-角色分离/scenario-04-existing-idea-sep.md)） |
+| 有/无 Skill | 场景 4、5 各 2 场（4a 角色分离；5 同一 AI 自评） |
+| 结果 | 仍 **无 pass**；均为模拟 |

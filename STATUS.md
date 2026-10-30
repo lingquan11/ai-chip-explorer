@@ -1,6 +1,6 @@
 # 项目状态
 
-更新：2026-10-30。维护者应根据实际运行结果更新，不应凭文件存在就写成已验证。维护改动按日期见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)。
+更新：2026-10-31。维护者应根据实际运行结果更新，不应凭文件存在就写成已验证。维护改动按日期见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)。
 
 ## 范围
 
@@ -70,6 +70,13 @@
 - 检索：listed arXiv abs 维护者 HTTP 核实（见补测 summary）；read_scope 摘要级。
 - 验证：`python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 项 OK。三场 **partial**。
 - 未完成：6a 分离、Codex、无 Skill 分离对照。见 [补测 summary](cases/runs/2026-10-30-角色分离-补测/summary.md)。
+
+### 2026-10-31 Skill 检索默认 ≤3 与自主评估
+
+- 日期：2026-10-31（Asia/Shanghai）。
+- 改动：`SKILL.md`「科研与证据」**首次检索默认 ≤3 条** + 检索**同/下轮**给结果；`evaluation/retrieval-record-template.md` 一句；新增 `cases/runs/2026-10-31-自主评估/`。
+- 复测：场景 **4a** 用户**未**说「最多 3 篇」；助手子代理仍 **≤3** abs（对照改前 [9 篇](cases/runs/2026-10-30-角色分离/scenario-04-existing-idea-sep.md) 与 [口头上限补测](cases/runs/2026-10-30-角色分离-补测/scenario-04-existing-idea-strict.md)）。
+- 验证：`python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 OK。仍 **无 pass**；未 Codex 加载。见 [summary](cases/runs/2026-10-31-自主评估/summary.md)。
 
 
 ## 2026-10-29 深度模拟（追加，不替换上文）
