@@ -50,3 +50,19 @@
 | 场景 | 完整对话 | 本轮可见结果 |
 |---|---|---|
 | 已有 idea（注意力分数） | [scenario-03-rerun](runs/2026-10-30-attention-count/scenario-03-rerun.md) | 引用两层表；12/8 与 4/0 分层说明；用户只认领 11、17 |
+
+## 2026-10-30 自主评估（检索模板 + 六类场景）
+
+新增 [evaluation/retrieval-record-template.md](../evaluation/retrieval-record-template.md)，并在 `SKILL.md` 中指向该模板。记录在 [runs/2026-10-30-自主评估/](runs/2026-10-30-自主评估/summary.md)。
+
+条件：**Composer 2.5**；Skill 基线 SHA `9a829278e75772911864e36fa290c29861307247`；同一 AI 三角色自评；**未**在 Codex 加载 Skill。4a/5a/6b 由维护会话打开 arXiv abs 或搜索页（摘要级），不是 Skill 自动检索。
+
+| 类型 | 次数 | 说明 |
+|---|---|---|
+| 1 零基础 / 2 方向不明 | 各 1 | 第 2 次未做（优先检索场景） |
+| 3 拒绝·无聊·时间 | 2 | [refuse-time](runs/2026-10-30-自主评估/scenario-03-refuse-time.md)、[bored-stop](runs/2026-10-30-自主评估/scenario-03-bored-stop.md) |
+| 4 已有 idea | 2 | [有 Skill](runs/2026-10-30-自主评估/scenario-04-existing-attention-with-skill.md) partial；[无 Skill 对照](runs/2026-10-30-自主评估/scenario-04-existing-attention-without-skill.md) 刻意 fail |
+| 5 没有 idea | 2 | [有 Skill](runs/2026-10-30-自主评估/scenario-05-no-idea-sram-with-skill.md)；[无 Skill 对照](runs/2026-10-30-自主评估/scenario-05-no-idea-sram-without-skill.md) |
+| 6 其他行业 | 2 | [无资料](runs/2026-10-30-自主评估/scenario-06-other-agri-no-kb.md)；[检索+笔记](runs/2026-10-30-自主评估/scenario-06-other-with-search.md) |
+
+整体仍为模拟；**无 pass**；不能把 fail 对照外推为默认模型行为。

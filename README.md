@@ -99,6 +99,13 @@ $ai-chip-explorer 我想探索机器人领域，附件和链接是我准备的�
 
 [阅读完整对话](cases/runs/2026-10-29-深度模拟/scenario-05-notes.md)
 
+### 查 idea 时写清「读到哪、没验证什么」（模拟）
+
+**痛点：** 没有 idea 或已有 idea 时，怕助手搜几篇论文就断言「没人做过」或「一定能发」。  
+**亮点：** 2026-10-30 自主评估中，加载 Skill 的场次按 [检索记录模板](evaluation/retrieval-record-template.md) 写检索式、查阅时间、abs 摘要阅读范围与未能验证项；检索命中少条时仍写明不等于穷尽。（同一 AI 自评，未 Codex 加载。）
+
+[有 Skill 的已有 idea 场次](cases/runs/2026-10-30-自主评估/scenario-04-existing-attention-with-skill.md) · [没有 idea + arXiv 检索](cases/runs/2026-10-30-自主评估/scenario-05-no-idea-sram-with-skill.md)
+
 ## 仓库内容
 
 - `skills/ai-chip-explorer/`：Skill 主文件及参考资料。
