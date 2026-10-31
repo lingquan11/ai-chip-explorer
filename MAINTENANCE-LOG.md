@@ -2,6 +2,31 @@
 
 按日期记录本仓库的维护性改动。模拟测试均为同一 AI 自评时会在条目中写明，不写成真实用户效果。
 
+## 2026-10-31：补测（1/2 第二次 + 无 Skill 对照 + knowledge-pack）
+
+**改了什么**
+
+- `skills/ai-chip-explorer/SKILL.md`：探索起点增加时间紧/术语/未联网就业/不因课程推验证。
+- `skills/ai-chip-explorer/references/knowledge-pack.md`：无资料切换行业时不映射芯片术语、不先抛空分类。
+- 新增 [cases/runs/2026-10-31-自主评估-补测/](cases/runs/2026-10-31-自主评估-补测/summary.md)（7 场 + 2 场改后复测）；更新 [cases/README.md](cases/README.md)、[STATUS.md](STATUS.md)。
+
+**为何**
+
+- 补 [2026-10-31-自主评估](cases/runs/2026-10-31-自主评估/summary.md) 待办：场景 1/2 第 2 次；1/2/6a 无 Skill 分离对照。
+- 无 Skill 对照暴露：场景 1 量规 4「行业常态」、6a 量规 3 GEMM 误桥接。
+
+**测试 / 限制**
+
+- 基线 `origin/main` SHA：`aac9503`；Composer 2.5；未 Codex 加载。
+- `python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 OK。
+- 改后复测仍 **partial**，无 pass；模拟不代表真实用户。
+
+**PR / commit**
+
+- （本维护 PR 合入后在此补 merge SHA）
+
+---
+
 ## 2026-10-31：Skill 检索默认 ≤3 与场景 4 无提示复测
 
 **改了什么**

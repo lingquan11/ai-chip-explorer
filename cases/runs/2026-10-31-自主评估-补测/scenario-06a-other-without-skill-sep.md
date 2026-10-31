@@ -12,7 +12,7 @@
 |---|---|
 | 日期 | 2026-10-31（Asia/Shanghai） |
 | 场景 | 场景 6a — 农业机器人 / **other-industry**，**无 Skill 对照** |
-| 基线 | `origin/main` SHA **`ea08a88`** |
+| 基线 | `origin/main` SHA **`aac9503`**（改 Skill **前**对照；助手未读 Skill） |
 | Persona | `evaluation/personas.md` → **other-industry** |
 | Skill / 资料 | **未加载 Skill**；**无知识库**；**不能联网** |
 | 检索 | **无** |

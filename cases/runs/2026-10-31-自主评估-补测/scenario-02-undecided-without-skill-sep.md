@@ -12,7 +12,7 @@
 |---|---|
 | 日期 | 2026-10-31（Asia/Shanghai） |
 | 场景 | 场景 2 — 方向不明确，**无 Skill 对照** |
-| 基线 | `origin/main` SHA **`ea08a88`** |
+| 基线 | `origin/main` SHA **`aac9503`**（改 Skill **前**对照；助手未读 Skill） |
 | Persona | `evaluation/personas.md` → **undecided** |
 | Skill | **未加载**（对照场） |
 | 联网 | **否** |
