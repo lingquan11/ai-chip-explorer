@@ -78,6 +78,13 @@
 - 复测：场景 **4a** 用户**未**说「最多 3 篇」；助手子代理仍 **≤3** abs（对照改前 [9 篇](cases/runs/2026-10-30-角色分离/scenario-04-existing-idea-sep.md) 与 [口头上限补测](cases/runs/2026-10-30-角色分离-补测/scenario-04-existing-idea-strict.md)）。
 - 验证：`python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 OK。仍 **无 pass**；未 Codex 加载。见 [summary](cases/runs/2026-10-31-自主评估/summary.md)。
 
+### 2026-10-31 补测（场景 1/2 第二次 + 无 Skill 对照）
+
+- 日期：2026-10-31（Asia/Shanghai）。
+- 改动：`SKILL.md` 起点段（时间紧不读整表、术语口语化、未联网就业边界、不因课程推验证）；`references/knowledge-pack.md`（无资料时不映射芯片术语、不抛空分类）。新增 `cases/runs/2026-10-31-自主评估-补测/`。
+- 验证：场景 1/2 **第 2 次**角色分离 partial；无 Skill 对照 1/2/6a；改后复测见 [补测 summary](cases/runs/2026-10-31-自主评估-补测/summary.md)。`python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 OK。
+- 未完成：Codex 加载；真实用户；DeepSeek（不做）。
+
 
 ## 2026-10-29 深度模拟（追加，不替换上文）
 
