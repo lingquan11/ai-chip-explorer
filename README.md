@@ -92,6 +92,8 @@ $ai-chip-explorer 我想探索机器人领域，附件和链接是我准备的�
 
 [阅读完整对话](cases/test-other-domain.md) · [从观察现象继续](cases/runs/2026-10-29-深度模拟/scenario-05.md)
 
+**无资料时勿硬套芯片优化话术（模拟对照）：** 维护场次中，未加载 Skill 的助手曾把 GEMM/NPU 映射到农业路径；读更新 `knowledge-pack.md` 后的补测里助手在第 2 轮明确拒绝（[改前](cases/runs/2026-10-31-自主评估-补测/scenario-06a-other-without-skill-sep.md) · [改后](cases/runs/2026-10-31-自主评估-补测/scenario-06a-other-no-kb-retest-after-fix.md)，**同一 AI 子代理**，**不等于**真实稳定性）。
+
 ### 只信读到的内容：自备笔记里无出处的断言会被放下
 
 **痛点：** 切换行业时粘贴自己的笔记，怕助手把笔记里的随口话当成事实或入行建议。  
