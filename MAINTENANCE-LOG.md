@@ -2,6 +2,32 @@
 
 按日期记录本仓库的维护性改动。模拟测试均为同一 AI 自评时会在条目中写明，不写成真实用户效果。
 
+## 2026-11-01：替代 G、检索相关性与 12 场评估
+
+**改了什么**
+
+- `skills/ai-chip-explorer/references/experiences.md`：新增 **替代体验 G**（用户拒手算且拒招聘/JD 时的口语化方向对照，无网页）。
+- `skills/ai-chip-explorer/SKILL.md`：体验段指向 E/F/**G**；科研段 ≤3 须与用户 problem **直接相关**、禁止无关凑数、旁证须同轮说明；体验偏好强化不得从单次体验/粗计时推适合性。
+- 新增 [cases/runs/2026-11-01-自主评估/](cases/runs/2026-11-01-自主评估/summary.md)（12 场 + 复测 + 3/4 无 Skill 对照）；更新 [cases/README.md](cases/README.md)、[STATUS.md](STATUS.md)。
+
+**为何**
+
+- [2026-10-31 3a](cases/runs/2026-10-31-自主评估/scenario-03-refuse-time.md)：拒招聘后缺低负担路径。
+- [2026-10-31 4a](cases/runs/2026-10-31-自主评估/scenario-04-existing-attention-with-skill-retest.md)：第 3 条 GEMMFIP 与用户 attention  framing 过宽。
+
+**测试 / 限制**
+
+- 基线 `origin/main` SHA：`b857c33`；Composer 2.5；未 Codex 加载。
+- arXiv abs：2402.07443、2406.10491、2111.12885、2505.12665 HTTP 200（摘要级）。
+- `python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 OK。
+- 仍无整体 pass；子代理分离 ≠ 盲测。
+
+**PR / commit**
+
+- （本轮 PR 合入后补 merge SHA）
+
+---
+
 ## 2026-10-31：补测（1/2 第二次 + 无 Skill 对照 + knowledge-pack）
 
 **改了什么**
