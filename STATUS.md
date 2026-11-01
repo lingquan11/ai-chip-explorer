@@ -1,6 +1,6 @@
 # 项目状态
 
-更新：2026-10-31。维护者应根据实际运行结果更新，不应凭文件存在就写成已验证。维护改动按日期见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)。
+更新：2026-11-01。维护者应根据实际运行结果更新，不应凭文件存在就写成已验证。维护改动按日期见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)。
 
 ## 范围
 
@@ -29,6 +29,12 @@
 
 每次修改请补充日期、改动、证据来源、验证命令及结果、未验证部分和后续事项。若有模拟结果，记录模型及版本、日期、环境、次数、角色、对话、评分依据和失败项。
 
+### 2026-11-01 替代 G + 检索相关性 + 六类 12 场
+
+- 日期：2026-11-01（Asia/Shanghai）。
+- 改动：`references/experiences.md` **替代体验 G**（拒手算且拒招聘/JD）；`SKILL.md` 指向 G、≤3 须与 problem 直接相关且不凑无关条、强化不得从单次体验/粗计时推适合性。
+- 验证：新增 [cases/runs/2026-11-01-自主评估/](cases/runs/2026-11-01-自主评估/summary.md)（12 场 + 2 改后复测 + 场景 3/4 无 Skill 对照）；基线 `origin/main` **`b857c33`**；**Composer 2.5**；**未** Codex 加载。
+- `python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 OK。整体仍 **无 pass**；模拟不代表真实用户。
 
 ### 2026-10-30 拒绝计算替代体验
 
