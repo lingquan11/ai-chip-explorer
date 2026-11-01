@@ -24,7 +24,7 @@
 
 **PR / commit**
 
-- （本轮 PR 合入后补 merge SHA）
+- [PR #19](https://github.com/lingquan11/ai-chip-explorer/pull/19) squash merge → **`b07366e`**
 
 ---
 
