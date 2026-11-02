@@ -262,3 +262,13 @@
 数字核对：CE-01、CE-02、CE-03 的正确答案与 experiences.md 对应参考答案逐项一致；陷阱答案为手算。CE-04 的 12 与 8 出自两层计数表，改成「Q 只读一次」后的 10 与 6 是按同一计数约定重数的结果，设计稿推算相同，但不在 experiences.md 中。
 
 未验证：CE-04 的 10 与 6 待零醛复核；4 张卡的难度和迷惑性未经真实用户试跑；Codex 等平台实际加载未验证；`personal-logs/` 仅为忽略规则，未建日志文件。验证命令：`python -m unittest discover -s evaluation -p "test_*.py" -v`（结果见 PR 说明）。
+
+## 2026-11-02 I2–I5：复述自检、失败档案、JD 拆解器、论文拆解卡
+
+新增 `references/oral-check.md`（I4）、`evaluation/failure-archive.md`（I5，含 FAIL-01 与 3 行排错清单）、`references/jd-decompose.md`（I2）、`references/paper-card.md`（I3）；指针分别加在 `experiences.md`「体验回顾」、`evaluation/README.md`、`domain.md`「就业与继续阅读」、`idea-card.md`「已有工作」。未改 SKILL.md 主流程。
+
+基线：从含 #24、#25 合并的 `origin/main`（`67701e0`）开分支；任务书称 #24 未合并，与仓库不符，以仓库为准。未触碰 #23 等在途分支。
+
+FAIL-01 核对：现象在 `cases/runs/2026-11-01-自主评估/scenario-01-beginner-misinterest-sep.md` 第 7 轮；第 1–6 轮用户未把 G 当编号说出（H2 排除）；修复前基线 `e0a5202` 的 SKILL.md 没有「不暴露编号」规则（H1 支持，时点为事后补写，因 2026-11-02 条目只记现象不记诊断）；结论保持「部分验证」。复测文件只存「对话要点」，非完整对话。
+
+未验证：四个 Idea 均未做真实用户试跑；JD 拆解、论文卡、口述自检都只有规则 / 模板，未实际执行；`jd-decompose.md` 的推荐关键词未实测；用户追问编号含义时的话术仓库未覆盖，档案中标「未核对 / 仓库未覆盖」；Codex 等平台实际加载未验证。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 tests OK。

@@ -144,3 +144,7 @@
 ### 2026-11-02 I1 反例题库
 
 新增 references/counterexamples.md（4 张陷阱卡与 6 个受控错因标签），experiences.md 加指针，.gitignore 忽略 personal-logs/。未验证：CE-04 改假设后的 10 与 6 待零醛复核；卡片难度与迷惑性未经真实用户试跑；Codex 实际加载未验证；没有真实日志。详见 MAINTENANCE-LOG.md。
+
+### 2026-11-02 I2–I5
+
+新增 oral-check.md、failure-archive.md（FAIL-01，部分验证）、jd-decompose.md、paper-card.md 及四处指针。均只有规则或模板，没有真实 JD 拆解、论文卡填写或口述试做记录；无真实用户试跑；关键词未实测；追问编号含义的话术仓库未覆盖；Codex 实际加载未验证。详见 MAINTENANCE-LOG.md。
