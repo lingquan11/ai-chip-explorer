@@ -244,3 +244,7 @@
 **PR / commit**
 
 - [PR #13](https://github.com/lingquan11/ai-chip-explorer/pull/13) squash merge → `5381127d895421ef8b6d9dc58407764adb1707bb`
+
+## 2026-11-02 真实试跑材料
+
+新增 P01 协议、观察表、预先冻结的模拟摩擦快照、表述边界和报告模板；记录格式增加可选证据层级与参与者代码，旧记录兼容。材料已备，未试跑。快照摘自 2026-11-02 自主评估相应场次，来源列于快照；不作为预测。验证：`python -m unittest discover -s evaluation -p "test_*.py" -v`，4 项通过；需在试跑前提交快照并记提交号，参与者自行选择是否公开原始记录。
