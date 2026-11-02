@@ -262,3 +262,7 @@
 数字核对：CE-01、CE-02、CE-03 的正确答案与 experiences.md 对应参考答案逐项一致；陷阱答案为手算。CE-04 的 12 与 8 出自两层计数表，改成「Q 只读一次」后的 10 与 6 是按同一计数约定重数的结果，设计稿推算相同，但不在 experiences.md 中。
 
 未验证：CE-04 的 10 与 6 待零醛复核；4 张卡的难度和迷惑性未经真实用户试跑；Codex 等平台实际加载未验证；`personal-logs/` 仅为忽略规则，未建日志文件。验证命令：`python -m unittest discover -s evaluation -p "test_*.py" -v`（结果见 PR 说明）。
+
+## 2026-11-02 计数规则与算力带宽体验
+
+集中在 learner-aids.md，新增计数约定、可选教学模型和探针；未使用被跳过的 0701-I4 评测工具。`python evaluation/check-counting-probes.py` 通过 9 个计数与 8 个教学合成探针的脚本核对；`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。独立第三路推导与语义复核未完成，记录见 cases/runs/2026-11-02-counting-model/summary.md；不得写成通过用户验证。
