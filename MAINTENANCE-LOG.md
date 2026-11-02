@@ -250,3 +250,11 @@
 新增 learner-aids 中一节与 SKILL 指针。只读核查 cpp-matmul-performance 的 src/day07-matrix-blocking.cpp：int 静态数组、MAX_N=256、sizes 固定、无命令行参数、CSV 写当前目录；三个 256 阶 int 矩阵按 4 字节估算为 768 KiB，须注意 C++ int 大小以实际平台为准。experiments/summarize_medians.py 固定读取 Day 5/7 历史 CSV，不读取新运行文件。
 
 验证：python -m unittest discover -s evaluation -p "test_*.py" -v：3 tests OK；汉字计数小节 466、全文 553、指针 49。维护者脚本化模拟见 cases/runs/2026-11-02-learner-aids-matmul/summary.md，最多 partial，非安装后实测或真实用户；按小节读取仍待核验。是否保留 blocked 对照及扩展规模由零醛决定。
+
+## 2026-11-02 I1 反例题库
+
+新增 `skills/ai-chip-explorer/references/counterexamples.md`（文件头规则、错因标签、4 张陷阱卡 CE-01～CE-04、本地日志格式）；`experiences.md` 在「体验回顾」末尾加一行指针；`.gitignore` 追加 `personal-logs/`。未改 SKILL.md 主流程。
+
+数字核对：CE-01、CE-02、CE-03 的正确答案与 experiences.md 对应参考答案逐项一致；陷阱答案为手算。CE-04 的 12 与 8 出自两层计数表，改成「Q 只读一次」后的 10 与 6 是按同一计数约定重数的结果，设计稿推算相同，但不在 experiences.md 中。
+
+未验证：CE-04 的 10 与 6 待零醛复核；4 张卡的难度和迷惑性未经真实用户试跑；Codex 等平台实际加载未验证；`personal-logs/` 仅为忽略规则，未建日志文件。验证命令：`python -m unittest discover -s evaluation -p "test_*.py" -v`（结果见 PR 说明）。
