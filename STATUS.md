@@ -140,3 +140,7 @@
 ### 2026-11-02 读问三步
 
 新增按需读问三步和脚本化模拟记录，最高 partial；真实用户和安装后加载仍未验证。
+
+### 2026-11-02 I1 反例题库
+
+新增 references/counterexamples.md（4 张陷阱卡与 6 个受控错因标签），experiences.md 加指针，.gitignore 忽略 personal-logs/。未验证：CE-04 改假设后的 10 与 6 待零醛复核；卡片难度与迷惑性未经真实用户试跑；Codex 实际加载未验证；没有真实日志。详见 MAINTENANCE-LOG.md。
