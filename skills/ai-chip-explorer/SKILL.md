@@ -35,4 +35,4 @@ description: Guide students exploring AI chip research and career directions or 
 
 ## 按需辅助
 
-用户提到自己的矩阵乘程序或性能数据时，只读 [学习辅助](references/learner-aids.md) 的「矩阵乘预测对照」小节；流程服从本文件禁令，用户说停即停。
+用户提到自己的矩阵乘程序或性能数据，或说读了某材料时，只读 [学习辅助](references/learner-aids.md) 的对应小节；流程服从本文件禁令，用户说停即停。
