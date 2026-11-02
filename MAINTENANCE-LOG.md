@@ -262,3 +262,13 @@
 数字核对：CE-01、CE-02、CE-03 的正确答案与 experiences.md 对应参考答案逐项一致；陷阱答案为手算。CE-04 的 12 与 8 出自两层计数表，改成「Q 只读一次」后的 10 与 6 是按同一计数约定重数的结果，设计稿推算相同，但不在 experiences.md 中。
 
 未验证：CE-04 的 10 与 6 待零醛复核；4 张卡的难度和迷惑性未经真实用户试跑；Codex 等平台实际加载未验证；`personal-logs/` 仅为忽略规则，未建日志文件。验证命令：`python -m unittest discover -s evaluation -p "test_*.py" -v`（结果见 PR 说明）。
+
+## 2026-11-02 13:27 批（分支 feat/batch-1327，本地，未推送）
+
+基线：main 上五项均未实现（17:25 批在待审分支，不重做）。新增：`evaluation/codex-probe.md`（第一阶段通断表，全部 not_run，附判读表与第二阶段三选一规则）；`experiences.md` 新增「跳过零的账」并在 `domain.md` 加指向；`references/prior-art-diff.md`（差异轴对照表）；`references/sim-reconcile.md`（对账卡）；`references/sources-ledger.md`（来源台账）；`SKILL.md` 加两句指针。
+
+数字核对：点积 23；乘加 8 对 3；读取 16 对 9；k=5 为 15、k=6 为 18，临界点按「位置占 1 次读取」约定，均为手算复核。
+
+验证：`python3 -m unittest discover -s evaluation -p "test_*.py" -v`，3 项通过（本机无 `python` 命令，用 python3）。
+
+未验证：Codex 实际加载与探针从未执行；零醛未走过跳零账本并记录用时；差异轴表未经真实填写，拒绝判决测试未做；SCALE-Sim 官方文档未核对，对账卡的时间与步骤未试做；台账中过期类别、复查时间与多个读到范围为待补；arXiv 2111.12885、2505.12665 的标题未记；未做第二阶段探针、对账安装层、知识包契约。
