@@ -15,3 +15,5 @@
 ## 测试本工具
 
 从仓库根目录运行 `python -m unittest discover -s evaluation -p "test_*.py" -v`。`summarize.py -` 可从标准输入读取一个 JSON，方便集成；输出为 UTF-8。测试包含虚构数据，只检验程序行为，不是 Skill 测试结果。
+
+已整理的失败案例与排错清单见 [失败档案](failure-archive.md)。
