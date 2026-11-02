@@ -244,3 +244,9 @@
 **PR / commit**
 
 - [PR #13](https://github.com/lingquan11/ai-chip-explorer/pull/13) squash merge → `5381127d895421ef8b6d9dc58407764adb1707bb`
+
+## 2026-11-02 矩阵乘预测对照辅助
+
+新增 learner-aids 中一节与 SKILL 指针。只读核查 cpp-matmul-performance 的 src/day07-matrix-blocking.cpp：int 静态数组、MAX_N=256、sizes 固定、无命令行参数、CSV 写当前目录；三个 256 阶 int 矩阵按 4 字节估算为 768 KiB，须注意 C++ int 大小以实际平台为准。experiments/summarize_medians.py 固定读取 Day 5/7 历史 CSV，不读取新运行文件。
+
+验证：python -m unittest discover -s evaluation -p "test_*.py" -v：3 tests OK；汉字计数小节 466、全文 553、指针 49。维护者脚本化模拟见 cases/runs/2026-11-02-learner-aids-matmul/summary.md，最多 partial，非安装后实测或真实用户；按小节读取仍待核验。是否保留 blocked 对照及扩展规模由零醛决定。

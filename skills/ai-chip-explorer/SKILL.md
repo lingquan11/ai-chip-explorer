@@ -32,3 +32,7 @@ description: Guide students exploring AI chip research and career directions or 
 ## 其他行业与来源
 
 用户要求换行业时，接受用户提供的文件、网页或论文，或在可用工具支持下搜索；先说明实际读到的来源和覆盖缺口。参考 [知识包指南](references/knowledge-pack.md)，根据可用资料建立临时方向地图及适当体验，不把 AI 芯片领域的具体内容当作其他行业的事实。对于缺失、过期、无法读取或不可靠的内容，标记并请求补充或限定范围，不声称已读取。
+
+## 按需辅助
+
+用户提到自己的矩阵乘程序或性能数据时，只读 [学习辅助](references/learner-aids.md) 的「矩阵乘预测对照」小节；流程服从本文件禁令，用户说停即停。

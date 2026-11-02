@@ -139,3 +139,5 @@
 | 5–6 | 各 2 | 课本重叠、改兴趣功耗；6a 无资料、6b 笔记陷阱 |
 
 改后复测：内部编号用语、拒 JD 路径、两层计数同轮。仍 **无 pass**；[无 Skill 1c](runs/2026-11-02-自主评估/scenario-01-without-skill-sep.md) 对照。
+
+2026-11-02：[矩阵乘辅助的脚本化模拟和静态复核](runs/2026-11-02-learner-aids-matmul/summary.md)；维护者自编自评，最多 partial，不是真实用户或独立测评。
