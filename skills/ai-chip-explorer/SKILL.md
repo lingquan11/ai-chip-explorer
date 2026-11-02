@@ -36,3 +36,5 @@ description: Guide students exploring AI chip research and career directions or 
 ## 按需辅助
 
 用户提到自己的矩阵乘程序或性能数据，或说读了某材料时，只读 [学习辅助](references/learner-aids.md) 的对应小节；流程服从本文件禁令，用户说停即停。
+
+用户已有 idea 且有 1–3 条检索命中、想看差异落在哪里时，读 [差异轴对照表](references/prior-art-diff.md)；由用户自己填，助手不替填，也不下新颖与否的判决。
