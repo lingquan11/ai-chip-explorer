@@ -262,3 +262,7 @@
 数字核对：CE-01、CE-02、CE-03 的正确答案与 experiences.md 对应参考答案逐项一致；陷阱答案为手算。CE-04 的 12 与 8 出自两层计数表，改成「Q 只读一次」后的 10 与 6 是按同一计数约定重数的结果，设计稿推算相同，但不在 experiences.md 中。
 
 未验证：CE-04 的 10 与 6 待零醛复核；4 张卡的难度和迷惑性未经真实用户试跑；Codex 等平台实际加载未验证；`personal-logs/` 仅为忽略规则，未建日志文件。验证命令：`python -m unittest discover -s evaluation -p "test_*.py" -v`（结果见 PR 说明）。
+
+## 2026-11-02 续学三行
+
+learner-aids.md 追加续学三行及用户确认、数据边界和存储提醒；README 增加一句保存位置说明。参考现有拒绝计算、拒招聘页和第二次无聊场景；脚本化示例与静态回归记录见 cases/runs/2026-11-02-learner-aids-resume/summary.md。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过；小节 242 汉字，全文 1103 汉字。新会话实际加载、独立评审及真实用户试用未验证。
