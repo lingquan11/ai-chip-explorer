@@ -251,6 +251,10 @@
 
 验证：python -m unittest discover -s evaluation -p "test_*.py" -v：3 tests OK；汉字计数小节 466、全文 553、指针 49。维护者脚本化模拟见 cases/runs/2026-11-02-learner-aids-matmul/summary.md，最多 partial，非安装后实测或真实用户；按小节读取仍待核验。是否保留 blocked 对照及扩展规模由零醛决定。
 
+## 2026-11-02 读问三步
+
+在 learner-aids 中追加一节并更新指针，记录材料来源与阅读范围；遵照用户要求将学习内容集中于该文件，未拆新参考资料。维护者脚本化模拟与四项静态回归见 cases/runs/2026-11-02-learner-aids-read-ask/summary.md，非真实用户或独立评估。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。未验证新会话按节加载和真实试用。
+
 ## 2026-11-02 I1 反例题库
 
 新增 `skills/ai-chip-explorer/references/counterexamples.md`（文件头规则、错因标签、4 张陷阱卡 CE-01～CE-04、本地日志格式）；`experiences.md` 在「体验回顾」末尾加一行指针；`.gitignore` 追加 `personal-logs/`。未改 SKILL.md 主流程。
