@@ -262,3 +262,7 @@
 数字核对：CE-01、CE-02、CE-03 的正确答案与 experiences.md 对应参考答案逐项一致；陷阱答案为手算。CE-04 的 12 与 8 出自两层计数表，改成「Q 只读一次」后的 10 与 6 是按同一计数约定重数的结果，设计稿推算相同，但不在 experiences.md 中。
 
 未验证：CE-04 的 10 与 6 待零醛复核；4 张卡的难度和迷惑性未经真实用户试跑；Codex 等平台实际加载未验证；`personal-logs/` 仅为忽略规则，未建日志文件。验证命令：`python -m unittest discover -s evaluation -p "test_*.py" -v`（结果见 PR 说明）。
+
+## 2026-11-02 误区快问
+
+learner-aids.md 增加五张卡和按需入口。来源核对：experiences.md 第 19 行复用、第 51 行 16/8、第 67 行 96/24、第 152 与 165 行两层 4/0 和 12/8；SKILL.md 第 28 行与 evaluation/retrieval-record-template.md 第 71 行限制检索结论。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。小节 356 字、全文 1217 字（汉字计数）。脚本化目标和回归仅静态核对，未实际测量触发精度或用户效果；见 cases/runs/2026-11-02-learner-aids-misconceptions/summary.md。计数规则 PR 尚未合并，合并时需统一免责措辞。
