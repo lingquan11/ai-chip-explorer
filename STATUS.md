@@ -1,6 +1,6 @@
 # 项目状态
 
-更新：2026-11-01。维护者应根据实际运行结果更新，不应凭文件存在就写成已验证。维护改动按日期见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)。
+更新：2026-11-02。维护者应根据实际运行结果更新，不应凭文件存在就写成已验证。维护改动按日期见 [MAINTENANCE-LOG.md](MAINTENANCE-LOG.md)。
 
 ## 范围
 
@@ -28,6 +28,13 @@
 ## 维护记录
 
 每次修改请补充日期、改动、证据来源、验证命令及结果、未验证部分和后续事项。若有模拟结果，记录模型及版本、日期、环境、次数、角色、对话、评分依据和失败项。
+
+### 2026-11-02 用户可见用语 + 两层计数 + 六类 12 场
+
+- 日期：2026-11-02（Asia/Shanghai）。
+- 改动：`SKILL.md` 禁止对用户暴露 A–G 体验编号、第二次 boring 停、有 idea 时两层计数同轮与「已有工作≠否定假设」；`references/experiences.md` 助手话术与两层同轮呈现。
+- 验证：新增 [cases/runs/2026-11-02-自主评估/](cases/runs/2026-11-02-自主评估/summary.md)（12 场 + 3 改后复测 + 场景 1/4 无 Skill 对照）；基线 `origin/main` **`e0a5202`**；**Composer 2.5**；**未** Codex 加载。
+- `python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 OK。整体仍 **无 pass**；模拟不代表真实用户。
 
 ### 2026-11-01 替代 G + 检索相关性 + 六类 12 场
 
