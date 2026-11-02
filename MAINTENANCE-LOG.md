@@ -2,6 +2,32 @@
 
 按日期记录本仓库的维护性改动。模拟测试均为同一 AI 自评时会在条目中写明，不写成真实用户效果。
 
+## 2026-11-02：用户可见用语、两层计数与 12 场评估
+
+**改了什么**
+
+- `skills/ai-chip-explorer/SKILL.md`：对用户不用 A–G 编号；第二次 boring 不轮换第三种；有 idea 时两层计数同轮、区分已发表工作与待验证假设。
+- `skills/ai-chip-explorer/references/experiences.md`：助手应做到增加不对用户暴露编号、第二次 boring 结束；两层计数须同轮呈现。
+- 新增 [cases/runs/2026-11-02-自主评估/](cases/runs/2026-11-02-自主评估/summary.md)；更新 [cases/README.md](cases/README.md)、[STATUS.md](STATUS.md)。
+
+**为何**
+
+- [2026-11-01 1a](cases/runs/2026-11-01-自主评估/scenario-01-beginner-misinterest-sep.md) 等：助手对用户说「G 式」等内部编号，用户听不懂。
+- [2026-10-29 深度模拟 scenario-03](cases/runs/2026-10-29-深度模拟/scenario-03.md)：分数层「0 次」易被听成零搬运。
+
+**测试 / 限制**
+
+- 基线 `origin/main` SHA：`e0a5202`；Composer 2.5；未 Codex 加载。
+- arXiv abs：2402.07443、2406.10491、2111.12885、2505.12665 HTTP 200（摘要级）。
+- `python3 -m unittest discover -s evaluation -p "test_*.py" -v`：3 OK。
+- 仍无整体 pass；子代理分离 ≠ 盲测。
+
+**PR / commit**
+
+- （合入后补 PR 链接与 merge SHA）
+
+---
+
 ## 2026-11-01：替代 G、检索相关性与 12 场评估
 
 **改了什么**
