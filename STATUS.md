@@ -144,3 +144,7 @@
 ### 2026-11-02 I1 反例题库
 
 新增 references/counterexamples.md（4 张陷阱卡与 6 个受控错因标签），experiences.md 加指针，.gitignore 忽略 personal-logs/。未验证：CE-04 改假设后的 10 与 6 待零醛复核；卡片难度与迷惑性未经真实用户试跑；Codex 实际加载未验证；没有真实日志。详见 MAINTENANCE-LOG.md。
+
+### 2026-11-02 数据旅程
+
+新增定性框图与场景卡；尚未进行两次模拟、独立评审或真实用户试跑。

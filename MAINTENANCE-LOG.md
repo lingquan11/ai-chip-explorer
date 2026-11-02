@@ -262,3 +262,7 @@
 数字核对：CE-01、CE-02、CE-03 的正确答案与 experiences.md 对应参考答案逐项一致；陷阱答案为手算。CE-04 的 12 与 8 出自两层计数表，改成「Q 只读一次」后的 10 与 6 是按同一计数约定重数的结果，设计稿推算相同，但不在 experiences.md 中。
 
 未验证：CE-04 的 10 与 6 待零醛复核；4 张卡的难度和迷惑性未经真实用户试跑；Codex 等平台实际加载未验证；`personal-logs/` 仅为忽略规则，未建日志文件。验证命令：`python -m unittest discover -s evaluation -p "test_*.py" -v`（结果见 PR 说明）。
+
+## 2026-11-02 数据旅程
+
+按用户要求将框图和活动放入 learner-aids.md；来源与概念边界标注在该节，Gemini 未评审。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。按要求跳过 0701-I4，因此未修改 SKILL.md 的替代入口；两次模拟、实际加载和用户体验未验证。月度人工核查招聘页提示已追加。
