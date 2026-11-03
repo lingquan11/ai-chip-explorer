@@ -22,6 +22,15 @@ class ReportTests(unittest.TestCase):
         self.assertIn('没有核实时间预算', result.stdout)
         self.assertIn('无联网', result.stdout)
 
+    def test_optional_real_user_fields_keep_old_records_compatible(self):
+        self.assertEqual(self.run_report(self.record()).returncode, 0)
+        record = self.record()
+        record.update(evidence_level='real-user-n1', participant_code='P01')
+        result = self.run_report(record)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn('real-user-n1', result.stdout)
+        self.assertIn('P01', result.stdout)
+
     def test_rejects_blank_evidence(self):
         record = self.record()
         record['evidence'] = '  '

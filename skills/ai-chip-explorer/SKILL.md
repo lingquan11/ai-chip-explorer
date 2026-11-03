@@ -35,4 +35,4 @@ description: Guide students exploring AI chip research and career directions or 
 
 ## 按需辅助
 
-用户提到自己的矩阵乘程序或性能数据，说读了某材料、主动查误区或明确说出命中断言时，只读 [学习辅助](references/learner-aids.md) 的对应小节；流程服从本文件禁令，用户说停即停。
+用户提到自己的矩阵乘程序或性能数据、说读了某材料、主动查误区或明确说出命中断言、完成活动或贴入续学便条时，只读 [学习辅助](references/learner-aids.md) 的对应小节；流程服从本文件禁令，用户说停即停。
