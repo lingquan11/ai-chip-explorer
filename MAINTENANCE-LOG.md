@@ -298,3 +298,7 @@ FAIL-01 核对：现象在 `cases/runs/2026-11-01-自主评估/scenario-01-begin
 ## 2026-11-02 计数规则与算力带宽体验
 
 集中在 learner-aids.md，新增计数约定、可选教学模型和探针；未使用被跳过的 0701-I4 评测工具。`python evaluation/check-counting-probes.py` 通过 9 个计数与 8 个教学合成探针的脚本核对；`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。独立第三路推导与语义复核未完成，记录见 cases/runs/2026-11-02-counting-model/summary.md；不得写成通过用户验证。
+
+## 2026-11-02 数据旅程
+
+按用户要求将框图和活动放入 learner-aids.md；来源与概念边界标注在该节，Gemini 未评审。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。按要求跳过 0701-I4，因此未修改 SKILL.md 的替代入口；两次模拟、实际加载和用户体验未验证。月度人工核查招聘页提示已追加。
