@@ -270,3 +270,7 @@ learner-aids.md 追加续学三行及用户确认、数据边界和存储提醒�
 ## 2026-11-02 真实试跑材料
 
 新增 P01 协议、观察表、预先冻结的模拟摩擦快照、表述边界和报告模板；记录格式增加可选证据层级与参与者代码，旧记录兼容。材料已备，未试跑。快照摘自 2026-11-02 自主评估相应场次，来源列于快照；不作为预测。验证：`python -m unittest discover -s evaluation -p "test_*.py" -v`，4 项通过；需在试跑前提交快照并记提交号，参与者自行选择是否公开原始记录。
+
+## 2026-11-02 误区快问
+
+learner-aids.md 增加五张卡和按需入口。来源核对：experiences.md 第 19 行复用、第 51 行 16/8、第 67 行 96/24、第 152 与 165 行两层 4/0 和 12/8；SKILL.md 第 28 行与 evaluation/retrieval-record-template.md 第 71 行限制检索结论。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。小节 356 字、全文 1217 字（汉字计数）。脚本化目标和回归仅静态核对，未实际测量触发精度或用户效果；见 cases/runs/2026-11-02-learner-aids-misconceptions/summary.md。计数规则 PR 尚未合并，合并时需统一免责措辞。
