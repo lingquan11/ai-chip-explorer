@@ -143,3 +143,5 @@
 2026-11-02：[矩阵乘辅助的脚本化模拟和静态复核](runs/2026-11-02-learner-aids-matmul/summary.md)；维护者自编自评，最多 partial，不是真实用户或独立测评。
 
 2026-11-02：[读问三步脚本化模拟与静态复核](runs/2026-11-02-learner-aids-read-ask/summary.md)，非真实用户，整体最多 partial。
+
+2026-11-02：[续学便条脚本化示例与静态核对](runs/2026-11-02-learner-aids-resume/summary.md)，最多 partial，未验证真实用户或新会话加载。
