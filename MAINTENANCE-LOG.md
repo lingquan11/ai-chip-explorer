@@ -263,6 +263,10 @@
 
 未验证：CE-04 的 10 与 6 待零醛复核；4 张卡的难度和迷惑性未经真实用户试跑；Codex 等平台实际加载未验证；`personal-logs/` 仅为忽略规则，未建日志文件。验证命令：`python -m unittest discover -s evaluation -p "test_*.py" -v`（结果见 PR 说明）。
 
+## 2026-11-02 续学三行
+
+learner-aids.md 追加续学三行及用户确认、数据边界和存储提醒；README 增加一句保存位置说明。参考现有拒绝计算、拒招聘页和第二次无聊场景；脚本化示例与静态回归记录见 cases/runs/2026-11-02-learner-aids-resume/summary.md。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过；小节 242 汉字，全文 1103 汉字。新会话实际加载、独立评审及真实用户试用未验证。
+
 ## 2026-11-02 真实试跑材料
 
 新增 P01 协议、观察表、预先冻结的模拟摩擦快照、表述边界和报告模板；记录格式增加可选证据层级与参与者代码，旧记录兼容。材料已备，未试跑。快照摘自 2026-11-02 自主评估相应场次，来源列于快照；不作为预测。验证：`python -m unittest discover -s evaluation -p "test_*.py" -v`，4 项通过；需在试跑前提交快照并记提交号，参与者自行选择是否公开原始记录。
