@@ -1,0 +1,89 @@
+{
+  "description": "人工构造的模型探针，非实测；只适用于每项写明的假设。",
+  "cases": [
+    {
+      "kind": "score_max",
+      "q": 2,
+      "keys": 3,
+      "d": 5,
+      "score_layer": 12,
+      "total": 72,
+      "assumption_change": "stream scores instead of writing and reading",
+      "new_score_layer": 0,
+      "new_total": 60
+    },
+    {
+      "kind": "score_max",
+      "q": 3,
+      "keys": 4,
+      "d": 7,
+      "score_layer": 24,
+      "total": 192,
+      "assumption_change": "stream scores instead of writing and reading",
+      "new_score_layer": 0,
+      "new_total": 168
+    },
+    {
+      "kind": "score_max",
+      "q": 2,
+      "keys": 5,
+      "d": 3,
+      "score_layer": 20,
+      "total": 80,
+      "assumption_change": "stream scores instead of writing and reading",
+      "new_score_layer": 0,
+      "new_total": 60
+    },
+    {
+      "kind": "tile_matmul",
+      "m": 3,
+      "k": 5,
+      "n": 7,
+      "mac": 105,
+      "input_reads": 50,
+      "output_writes": 21,
+      "total": 71
+    },
+    {
+      "kind": "tile_matmul",
+      "m": 5,
+      "k": 3,
+      "n": 6,
+      "mac": 90,
+      "input_reads": 33,
+      "output_writes": 30,
+      "total": 63
+    },
+    {
+      "kind": "tile_matmul",
+      "m": 7,
+      "k": 2,
+      "n": 5,
+      "mac": 70,
+      "input_reads": 24,
+      "output_writes": 35,
+      "total": 59
+    },
+    {
+      "kind": "quant_storage",
+      "elements": 5,
+      "bits": 8,
+      "scale_bits": 32,
+      "total_bits": 72
+    },
+    {
+      "kind": "quant_storage",
+      "elements": 7,
+      "bits": 4,
+      "scale_bits": 16,
+      "total_bits": 44
+    },
+    {
+      "kind": "quant_storage",
+      "elements": 9,
+      "bits": 16,
+      "scale_bits": 32,
+      "total_bits": 176
+    }
+  ]
+}

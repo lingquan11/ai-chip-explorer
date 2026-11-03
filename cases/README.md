@@ -144,4 +144,11 @@
 
 2026-11-02：[读问三步脚本化模拟与静态复核](runs/2026-11-02-learner-aids-read-ask/summary.md)，非真实用户，整体最多 partial。
 
+
+2026-11-02：[续学便条脚本化示例与静态核对](runs/2026-11-02-learner-aids-resume/summary.md)，最多 partial，未验证真实用户或新会话加载。
+
+2026-11-02：[误区快问脚本化触发核对](runs/2026-11-02-learner-aids-misconceptions/summary.md)，非真实用户或模型触发率测试。
+
+2026-11-02：[计数模型脚本核对及限制](runs/2026-11-02-counting-model/summary.md)，非实测、非独立评审。
+
 2026-11-02：[数据旅程验证状态](runs/2026-11-02-data-journey/summary.md)：目前仅静态检查，尚未模拟。

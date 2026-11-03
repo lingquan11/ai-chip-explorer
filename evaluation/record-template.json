@@ -8,5 +8,7 @@
   "evidence": "填写具体对话轮次与判断依据；未运行时写尚无",
   "issues": "填写失败项或未运行原因",
   "limitations": "填写证据、环境与测试范围的限制",
-  "transcript": "填写完整对话；未运行时写尚无"
+  "transcript": "填写完整对话；未运行时写尚无",
+  "evidence_level": "",
+  "participant_code": ""
 }

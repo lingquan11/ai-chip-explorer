@@ -263,6 +263,43 @@
 
 未验证：CE-04 的 10 与 6 待零醛复核；4 张卡的难度和迷惑性未经真实用户试跑；Codex 等平台实际加载未验证；`personal-logs/` 仅为忽略规则，未建日志文件。验证命令：`python -m unittest discover -s evaluation -p "test_*.py" -v`（结果见 PR 说明）。
 
+
+## 2026-11-02 续学三行
+
+learner-aids.md 追加续学三行及用户确认、数据边界和存储提醒；README 增加一句保存位置说明。参考现有拒绝计算、拒招聘页和第二次无聊场景；脚本化示例与静态回归记录见 cases/runs/2026-11-02-learner-aids-resume/summary.md。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过；小节 242 汉字，全文 1103 汉字。新会话实际加载、独立评审及真实用户试用未验证。
+
+## 2026-11-02 真实试跑材料
+
+新增 P01 协议、观察表、预先冻结的模拟摩擦快照、表述边界和报告模板；记录格式增加可选证据层级与参与者代码，旧记录兼容。材料已备，未试跑。快照摘自 2026-11-02 自主评估相应场次，来源列于快照；不作为预测。验证：`python -m unittest discover -s evaluation -p "test_*.py" -v`，4 项通过；需在试跑前提交快照并记提交号，参与者自行选择是否公开原始记录。
+
+## 2026-11-02 误区快问
+
+learner-aids.md 增加五张卡和按需入口。来源核对：experiences.md 第 19 行复用、第 51 行 16/8、第 67 行 96/24、第 152 与 165 行两层 4/0 和 12/8；SKILL.md 第 28 行与 evaluation/retrieval-record-template.md 第 71 行限制检索结论。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。小节 356 字、全文 1217 字（汉字计数）。脚本化目标和回归仅静态核对，未实际测量触发精度或用户效果；见 cases/runs/2026-11-02-learner-aids-misconceptions/summary.md。计数规则 PR 尚未合并，合并时需统一免责措辞。
+
+## 2026-11-02 I2–I5：复述自检、失败档案、JD 拆解器、论文拆解卡
+
+新增 `references/oral-check.md`（I4）、`evaluation/failure-archive.md`（I5，含 FAIL-01 与 3 行排错清单）、`references/jd-decompose.md`（I2）、`references/paper-card.md`（I3）；指针分别加在 `experiences.md`「体验回顾」、`evaluation/README.md`、`domain.md`「就业与继续阅读」、`idea-card.md`「已有工作」。未改 SKILL.md 主流程。
+
+基线：从含 #24、#25 合并的 `origin/main`（`67701e0`）开分支；任务书称 #24 未合并，与仓库不符，以仓库为准。未触碰 #23 等在途分支。
+
+FAIL-01 核对：现象在 `cases/runs/2026-11-01-自主评估/scenario-01-beginner-misinterest-sep.md` 第 7 轮；第 1–6 轮用户未把 G 当编号说出（H2 排除）；修复前基线 `e0a5202` 的 SKILL.md 没有「不暴露编号」规则（H1 支持，时点为事后补写，因 2026-11-02 条目只记现象不记诊断）；结论保持「部分验证」。复测文件只存「对话要点」，非完整对话。
+
+未验证：四个 Idea 均未做真实用户试跑；JD 拆解、论文卡、口述自检都只有规则 / 模板，未实际执行；`jd-decompose.md` 的推荐关键词未实测；用户追问编号含义时的话术仓库未覆盖，档案中标「未核对 / 仓库未覆盖」；Codex 等平台实际加载未验证。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 tests OK。
+
+## 2026-11-02 13:27 批（分支 feat/batch-1327，本地，未推送）
+
+基线：main 上五项均未实现（17:25 批在待审分支，不重做）。新增：`evaluation/codex-probe.md`（第一阶段通断表，全部 not_run，附判读表与第二阶段三选一规则）；`experiences.md` 新增「跳过零的账」并在 `domain.md` 加指向；`references/prior-art-diff.md`（差异轴对照表）；`references/sim-reconcile.md`（对账卡）；`references/sources-ledger.md`（来源台账）；`SKILL.md` 加两句指针。
+
+数字核对：点积 23；乘加 8 对 3；读取 16 对 9；k=5 为 15、k=6 为 18，临界点按「位置占 1 次读取」约定，均为手算复核。
+
+验证：`python3 -m unittest discover -s evaluation -p "test_*.py" -v`，3 项通过（本机无 `python` 命令，用 python3）。
+
+未验证：Codex 实际加载与探针从未执行；零醛未走过跳零账本并记录用时；差异轴表未经真实填写，拒绝判决测试未做；SCALE-Sim 官方文档未核对，对账卡的时间与步骤未试做；台账中过期类别、复查时间与多个读到范围为待补；arXiv 2111.12885、2505.12665 的标题未记；未做第二阶段探针、对账安装层、知识包契约。
+
+## 2026-11-02 计数规则与算力带宽体验
+
+集中在 learner-aids.md，新增计数约定、可选教学模型和探针；未使用被跳过的 0701-I4 评测工具。`python evaluation/check-counting-probes.py` 通过 9 个计数与 8 个教学合成探针的脚本核对；`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。独立第三路推导与语义复核未完成，记录见 cases/runs/2026-11-02-counting-model/summary.md；不得写成通过用户验证。
+
 ## 2026-11-02 数据旅程
 
 按用户要求将框图和活动放入 learner-aids.md；来源与概念边界标注在该节，Gemini 未评审。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。按要求跳过 0701-I4，因此未修改 SKILL.md 的替代入口；两次模拟、实际加载和用户体验未验证。月度人工核查招聘页提示已追加。
