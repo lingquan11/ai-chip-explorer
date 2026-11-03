@@ -40,4 +40,4 @@ description: Guide students exploring AI chip research and career directions or 
 
 用户想把手算与模拟器输出对账时，读 [对账卡](references/sim-reconcile.md)；不代填模拟器输出，不把数值说成真实硬件性能。
 
-讨论计数、搬运或速度时，按需读取[学习辅助](references/learner-aids.md)的「计数规则与算力带宽体验」；用户拒绝计算时不触发。
+讨论计数、搬运或速度时，按需读取 [学习辅助](references/learner-aids.md) 的「计数规则与算力带宽体验」；用户拒绝计算时不触发。

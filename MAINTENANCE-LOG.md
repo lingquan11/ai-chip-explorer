@@ -297,4 +297,4 @@ FAIL-01 核对：现象在 `cases/runs/2026-11-01-自主评估/scenario-01-begin
 
 ## 2026-11-02 计数规则与算力带宽体验
 
-集中在 learner-aids.md，新增计数约定、可选教学模型和探针；未使用被跳过的 0701-I4 评测工具。 `python evaluation/check-counting-probes.py` 通过 9 个计数与 8 个教学合成探针的脚本核对； `python -m unittest discover -s evaluation -p "test_*.py" -v` ：3 项通过。独立第三路推导与语义复核未完成，记录见 cases/runs/2026-11-02-counting-model/summary.md；不得写成通过用户验证。
+集中在 learner-aids.md，新增计数约定、可选教学模型和探针；未使用被跳过的 0701-I4 评测工具。`python evaluation/check-counting-probes.py` 通过 9 个计数与 8 个教学合成探针的脚本核对；`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。独立第三路推导与语义复核未完成，记录见 cases/runs/2026-11-02-counting-model/summary.md；不得写成通过用户验证。
