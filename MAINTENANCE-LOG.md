@@ -274,3 +274,13 @@ learner-aids.md 追加续学三行及用户确认、数据边界和存储提醒�
 ## 2026-11-02 误区快问
 
 learner-aids.md 增加五张卡和按需入口。来源核对：experiences.md 第 19 行复用、第 51 行 16/8、第 67 行 96/24、第 152 与 165 行两层 4/0 和 12/8；SKILL.md 第 28 行与 evaluation/retrieval-record-template.md 第 71 行限制检索结论。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。小节 356 字、全文 1217 字（汉字计数）。脚本化目标和回归仅静态核对，未实际测量触发精度或用户效果；见 cases/runs/2026-11-02-learner-aids-misconceptions/summary.md。计数规则 PR 尚未合并，合并时需统一免责措辞。
+
+## 2026-11-02 I2–I5：复述自检、失败档案、JD 拆解器、论文拆解卡
+
+新增 `references/oral-check.md`（I4）、`evaluation/failure-archive.md`（I5，含 FAIL-01 与 3 行排错清单）、`references/jd-decompose.md`（I2）、`references/paper-card.md`（I3）；指针分别加在 `experiences.md`「体验回顾」、`evaluation/README.md`、`domain.md`「就业与继续阅读」、`idea-card.md`「已有工作」。未改 SKILL.md 主流程。
+
+基线：从含 #24、#25 合并的 `origin/main`（`67701e0`）开分支；任务书称 #24 未合并，与仓库不符，以仓库为准。未触碰 #23 等在途分支。
+
+FAIL-01 核对：现象在 `cases/runs/2026-11-01-自主评估/scenario-01-beginner-misinterest-sep.md` 第 7 轮；第 1–6 轮用户未把 G 当编号说出（H2 排除）；修复前基线 `e0a5202` 的 SKILL.md 没有「不暴露编号」规则（H1 支持，时点为事后补写，因 2026-11-02 条目只记现象不记诊断）；结论保持「部分验证」。复测文件只存「对话要点」，非完整对话。
+
+未验证：四个 Idea 均未做真实用户试跑；JD 拆解、论文卡、口述自检都只有规则 / 模板，未实际执行；`jd-decompose.md` 的推荐关键词未实测；用户追问编号含义时的话术仓库未覆盖，档案中标「未核对 / 仓库未覆盖」；Codex 等平台实际加载未验证。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 tests OK。

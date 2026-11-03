@@ -156,3 +156,7 @@
 ### 2026-11-02 误区快问
 
 新增五张按需学习卡；脚本化目标与静态检查最多 partial，未验证实际触发或真实用户体验。
+
+### 2026-11-02 I2–I5
+
+新增 oral-check.md、failure-archive.md（FAIL-01，部分验证）、jd-decompose.md、paper-card.md 及四处指针。均只有规则或模板，没有真实 JD 拆解、论文卡填写或口述试做记录；无真实用户试跑；关键词未实测；追问编号含义的话术仓库未覆盖；Codex 实际加载未验证。详见 MAINTENANCE-LOG.md。

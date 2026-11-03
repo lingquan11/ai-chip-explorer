@@ -16,6 +16,8 @@
 
 从仓库根目录运行 `python -m unittest discover -s evaluation -p "test_*.py" -v`。`summarize.py -` 可从标准输入读取一个 JSON，方便集成；输出为 UTF-8。测试包含虚构数据，只检验程序行为，不是 Skill 测试结果。
 
+已整理的失败案例与排错清单见 [失败档案](failure-archive.md)。
+
 ## 真实试跑（未进行）
 
 [真实试跑协议与表格](real-trial/PROTOCOL.md) 已准备；n=1 的真实记录与模拟分开，`evidence_level` 和 `participant_code` 为可选字段，旧记录仍可读取。原始内容发布前须取得参与者同意。
