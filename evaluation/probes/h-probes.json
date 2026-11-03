@@ -1,0 +1,69 @@
+{
+  "description": "教学模型虚构探针，非实测。",
+  "cases": [
+    {
+      "category": "numeric",
+      "P": 12,
+      "B": 2,
+      "mac": 24,
+      "elements": 12,
+      "expected": "bandwidth",
+      "expected_rate": 4
+    },
+    {
+      "category": "numeric",
+      "P": 8,
+      "B": 4,
+      "mac": 18,
+      "elements": 6,
+      "expected": "compute",
+      "expected_rate": 8
+    },
+    {
+      "category": "numeric",
+      "P": 10,
+      "B": 5,
+      "mac": 24,
+      "elements": 12,
+      "expected": "balanced",
+      "expected_rate": 10
+    },
+    {
+      "category": "numeric",
+      "P": 12,
+      "B": 6,
+      "mac": 15,
+      "elements": 5,
+      "expected": "compute",
+      "expected_rate": 12
+    },
+    {
+      "category": "misconception",
+      "claim": "访问数减少必然实际加速",
+      "expected": "模型不能证明实际速度"
+    },
+    {
+      "category": "misconception",
+      "claim": "模型忽略缓存，结果就是芯片性能",
+      "expected": "极简模型不代表真实硬件性能"
+    },
+    {
+      "category": "seed_error",
+      "P": 12,
+      "B": 2,
+      "mac": 24,
+      "elements": 12,
+      "claimed_rate": 12,
+      "expected_rate": 4
+    },
+    {
+      "category": "seed_error",
+      "P": 10,
+      "B": 5,
+      "mac": 24,
+      "elements": 12,
+      "claimed_label": "带宽",
+      "expected": "balanced"
+    }
+  ]
+}
