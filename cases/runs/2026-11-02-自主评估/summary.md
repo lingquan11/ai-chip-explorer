@@ -29,7 +29,7 @@
 | 问题 | 改前 | 修改 | 改后 |
 |---|---|---|---|
 | 对用户说 G/F/A–D（1/3） | [1a](scenario-01-jargon-sep.md) 量规 5/6 partial | `SKILL.md` + `experiences.md` 禁止对用户暴露编号 | [1a retest](scenario-01-jargon-retest-after-fix.md) 5/6 **通过**；[3 retest](scenario-03-refuse-jd-retest-after-fix.md) 量规 5 **通过** |
-| 分数层 0 次误解（4） | 历史 [10-29 scenario-03](../../2026-10-29-深度模拟/scenario-03.md) | SKILL 有 idea + experiences 两层同轮 | [4 layer2 retest](scenario-04-layer2-retest-after-fix.md) 量规 5 **通过** |
+| 分数层 0 次误解（4） | 历史 [10-29 scenario-03](../2026-10-29-深度模拟/scenario-03.md) | SKILL 有 idea + experiences 两层同轮 | [4 layer2 retest](scenario-04-layer2-retest-after-fix.md) 量规 5 **通过** |
 | 第二次 boring 仍轮换 | 10-29 scenario-02 | experiences 第 2 条 + SKILL 一句 | [3b](scenario-03-double-bored-sep.md) 6 **通过**（改前已符合，本轮写入 Skill 固化） |
 
 ## 无 Skill 对照
