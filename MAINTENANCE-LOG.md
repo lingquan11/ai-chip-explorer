@@ -18,6 +18,10 @@
 
 **验证**：脚本检查全仓库 Markdown 相对链接（含 `#` 锚点）无断链；`python3 -m unittest discover -s evaluation -p "test_*.py" -v` 4 项通过；`python3 evaluation/check-counting-probes.py` 通过。
 
+**PR / commit**
+
+- [PR #34](https://github.com/lingquan11/ai-chip-explorer/pull/34)（合入后补 merge SHA）
+
 ---
 
 ## 2026-11-02：用户可见用语、两层计数与 12 场评估
