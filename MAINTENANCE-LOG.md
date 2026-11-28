@@ -1,6 +1,24 @@
 # 维护日志
 
-按日期记录本仓库的维护性改动。模拟测试均为同一 AI 自评时会在条目中写明，不写成真实用户效果。
+按日期记录本仓库的维护性改动。模拟测试均为同一 AI 自评时会在条目中写明，不写成真实用户效果。[STATUS.md](STATUS.md) 只保留当前状态和待办，历史一律记在本文件。
+
+每次修改请补充日期、改动、证据来源、验证命令及结果、未验证部分和后续事项。若有模拟结果，记录模型及版本、日期、环境、次数、角色、对话、评分依据和失败项；新的测试批次同时在 [cases/README.md](cases/README.md) 的「测试批次」表加一行。未运行时不得编造表现、评分或用户评价；公开前检查内容与权限。
+
+## 2026-11-27：精简面向读者的文档
+
+**改了什么**
+
+- [README.md](README.md) 从 132 行压到约 60 行：能做什么、安装、三个起手提示词、局限、目录。原来 11 段「痛点 / 亮点」移到 [cases/README.md](cases/README.md)，做成一张表；反复出现的「模拟」「不等于真实稳定性」等限定合并成一条局限；首页不再出现内部体验编号。
+- [cases/README.md](cases/README.md) 不再逐批复述各次运行，改为「典型案例」表加「测试批次」索引表；每批细节只留在该批 `summary.md`。
+- [STATUS.md](STATUS.md) 只留当前状态和待办；原「维护记录」各节与本文件重复，已删除；其中写记录的规则移到本文件开头。顺带更正两处过时状态：许可证已是 MIT；评估单测现为 4 项。
+- `cases/runs/` 下六个只有 `summary.md` 的 2026-11-02 目录合并为 [cases/runs/2026-11-02-learner-aids.md](cases/runs/2026-11-02-learner-aids.md)，正文原样保留，只把标题降一级；本文件里指向旧路径的六处已更新。
+- 补记 PR #21 的 merge SHA，并注明 13:27 批已由 PR #31 合入。
+
+**未改**：`skills/ai-chip-explorer/` 与 `cases/runs/` 下的对话记录一字未动。
+
+**验证**：脚本检查全仓库 Markdown 相对链接（含 `#` 锚点）无断链；`python3 -m unittest discover -s evaluation -p "test_*.py" -v` 4 项通过；`python3 evaluation/check-counting-probes.py` 通过。
+
+---
 
 ## 2026-11-02：用户可见用语、两层计数与 12 场评估
 
@@ -24,7 +42,7 @@
 
 **PR / commit**
 
-- （合入后补 PR 链接与 merge SHA）
+- [PR #21](https://github.com/lingquan11/ai-chip-explorer/pull/21) merge → `a47627fda897d4d9231818af3c014a8aa7eaa354`
 
 ---
 
@@ -249,11 +267,11 @@
 
 新增 learner-aids 中一节与 SKILL 指针。只读核查 cpp-matmul-performance 的 src/day07-matrix-blocking.cpp：int 静态数组、MAX_N=256、sizes 固定、无命令行参数、CSV 写当前目录；三个 256 阶 int 矩阵按 4 字节估算为 768 KiB，须注意 C++ int 大小以实际平台为准。experiments/summarize_medians.py 固定读取 Day 5/7 历史 CSV，不读取新运行文件。
 
-验证：python -m unittest discover -s evaluation -p "test_*.py" -v：3 tests OK；汉字计数小节 466、全文 553、指针 49。维护者脚本化模拟见 cases/runs/2026-11-02-learner-aids-matmul/summary.md，最多 partial，非安装后实测或真实用户；按小节读取仍待核验。是否保留 blocked 对照及扩展规模由零醛决定。
+验证：python -m unittest discover -s evaluation -p "test_*.py" -v：3 tests OK；汉字计数小节 466、全文 553、指针 49。维护者脚本化模拟见 cases/runs/2026-11-02-learner-aids.md「矩阵乘辅助」一节，最多 partial，非安装后实测或真实用户；按小节读取仍待核验。是否保留 blocked 对照及扩展规模由零醛决定。
 
 ## 2026-11-02 读问三步
 
-在 learner-aids 中追加一节并更新指针，记录材料来源与阅读范围；遵照用户要求将学习内容集中于该文件，未拆新参考资料。维护者脚本化模拟与四项静态回归见 cases/runs/2026-11-02-learner-aids-read-ask/summary.md，非真实用户或独立评估。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。未验证新会话按节加载和真实试用。
+在 learner-aids 中追加一节并更新指针，记录材料来源与阅读范围；遵照用户要求将学习内容集中于该文件，未拆新参考资料。维护者脚本化模拟与四项静态回归见 cases/runs/2026-11-02-learner-aids.md「读问三步」一节，非真实用户或独立评估。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。未验证新会话按节加载和真实试用。
 
 ## 2026-11-02 I1 反例题库
 
@@ -265,7 +283,7 @@
 
 ## 2026-11-02 续学三行
 
-learner-aids.md 追加续学三行及用户确认、数据边界和存储提醒；README 增加一句保存位置说明。参考现有拒绝计算、拒招聘页和第二次无聊场景；脚本化示例与静态回归记录见 cases/runs/2026-11-02-learner-aids-resume/summary.md。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过；小节 242 汉字，全文 1103 汉字。新会话实际加载、独立评审及真实用户试用未验证。
+learner-aids.md 追加续学三行及用户确认、数据边界和存储提醒；README 增加一句保存位置说明。参考现有拒绝计算、拒招聘页和第二次无聊场景；脚本化示例与静态回归记录见 cases/runs/2026-11-02-learner-aids.md「续学便条」一节。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过；小节 242 汉字，全文 1103 汉字。新会话实际加载、独立评审及真实用户试用未验证。
 
 ## 2026-11-02 真实试跑材料
 
@@ -273,7 +291,7 @@ learner-aids.md 追加续学三行及用户确认、数据边界和存储提醒�
 
 ## 2026-11-02 误区快问
 
-learner-aids.md 增加五张卡和按需入口。来源核对：experiences.md 第 19 行复用、第 51 行 16/8、第 67 行 96/24、第 152 与 165 行两层 4/0 和 12/8；SKILL.md 第 28 行与 evaluation/retrieval-record-template.md 第 71 行限制检索结论。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。小节 356 字、全文 1217 字（汉字计数）。脚本化目标和回归仅静态核对，未实际测量触发精度或用户效果；见 cases/runs/2026-11-02-learner-aids-misconceptions/summary.md。计数规则 PR 尚未合并，合并时需统一免责措辞。
+learner-aids.md 增加五张卡和按需入口。来源核对：experiences.md 第 19 行复用、第 51 行 16/8、第 67 行 96/24、第 152 与 165 行两层 4/0 和 12/8；SKILL.md 第 28 行与 evaluation/retrieval-record-template.md 第 71 行限制检索结论。`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。小节 356 字、全文 1217 字（汉字计数）。脚本化目标和回归仅静态核对，未实际测量触发精度或用户效果；见 cases/runs/2026-11-02-learner-aids.md「误区快问」一节。计数规则 PR 尚未合并，合并时需统一免责措辞。
 
 ## 2026-11-02 I2–I5：复述自检、失败档案、JD 拆解器、论文拆解卡
 
@@ -287,6 +305,8 @@ FAIL-01 核对：现象在 `cases/runs/2026-11-01-自主评估/scenario-01-begin
 
 ## 2026-11-02 13:27 批（分支 feat/batch-1327，本地，未推送）
 
+后续已合入：[PR #31](https://github.com/lingquan11/ai-chip-explorer/pull/31) merge → `7046a843051101a04279ada28f734a0942ddb0e6`。
+
 基线：main 上五项均未实现（17:25 批在待审分支，不重做）。新增：`evaluation/codex-probe.md`（第一阶段通断表，全部 not_run，附判读表与第二阶段三选一规则）；`experiences.md` 新增「跳过零的账」并在 `domain.md` 加指向；`references/prior-art-diff.md`（差异轴对照表）；`references/sim-reconcile.md`（对账卡）；`references/sources-ledger.md`（来源台账）；`SKILL.md` 加两句指针。
 
 数字核对：点积 23；乘加 8 对 3；读取 16 对 9；k=5 为 15、k=6 为 18，临界点按「位置占 1 次读取」约定，均为手算复核。
@@ -297,7 +317,7 @@ FAIL-01 核对：现象在 `cases/runs/2026-11-01-自主评估/scenario-01-begin
 
 ## 2026-11-02 计数规则与算力带宽体验
 
-集中在 learner-aids.md，新增计数约定、可选教学模型和探针；未使用被跳过的 0701-I4 评测工具。`python evaluation/check-counting-probes.py` 通过 9 个计数与 8 个教学合成探针的脚本核对；`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。独立第三路推导与语义复核未完成，记录见 cases/runs/2026-11-02-counting-model/summary.md；不得写成通过用户验证。
+集中在 learner-aids.md，新增计数约定、可选教学模型和探针；未使用被跳过的 0701-I4 评测工具。`python evaluation/check-counting-probes.py` 通过 9 个计数与 8 个教学合成探针的脚本核对；`python -m unittest discover -s evaluation -p "test_*.py" -v`：3 项通过。独立第三路推导与语义复核未完成，记录见 cases/runs/2026-11-02-learner-aids.md「计数模型」一节；不得写成通过用户验证。
 
 ## 2026-11-02 数据旅程
 
